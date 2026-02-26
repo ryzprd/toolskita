@@ -4,8 +4,20 @@ const express = require("express");
 const path = require("path");
 const tools = require("./data/tools.json");
 
+const express = require("express");
 const app = express();
+
+// route utama
+app.get("/", (req, res) => {
+  res.send("Website ToolKita Online 🚀");
+});
+
+// set port otomatis
 const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
+});
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
