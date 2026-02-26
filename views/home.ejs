@@ -1,0 +1,6 @@
+<h2>Daftar 100 Tools</h2>
+<ul>
+<% tools.forEach(tool => { %>
+<li><a href="/tools/<%= tool.slug %>"><%= tool.name %></a></li>
+<% }) %>
+</ul>
